@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>HBD SELDAA.. 🎂 🥳</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+    <section class="entry">
+      <div id="particles-js">
+        <div class="float-sm-start">
+          <section id="candle-placeholder">
+            <h1>
+              Met Ultah Seldaa..<br />..Buat Permohonan duls..<br />.. terus tiup lilin nya 😃😃 <br />
+              Moga tercapai, Amin 🙏
+            </h1>
+            <div id="glow" class="glow"></div>
+            <div id="candle">
+              <div class="stripe"></div>
+              <div class="stripe"></div>
+              <div class="stripe"></div>
+              <div class="stripe"></div>
+              <div class="stripe"></div>
+              <div id="top">
+                <div class="smoke"></div>
+                <div class="smoke"></div>
+                <div class="smoke"></div>
+                <div id="knot"></div>
+                <div id="flame" class="burn"></div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      $(function () {
+        var flame = $("#flame");
+        var txt = $("h1");
+
+        flame.on({
+          click: function () {
+            flame.removeClass("burn").addClass("puff");
+            $(".smoke").each(function () {
+              $(this).addClass("puff-bubble");
+            });
+            $("#glow").remove();
+            txt.hide().html("It <b>will</b> come true..").delay(750).fadeOut(300);
+            $("#candle").animate(
+              {
+                opacity: ".5",
+              },
+              100
+            );
+          },
+        });
+      });
+    </script>
+
+    <script type="text/javascript" src="https://cdn.dfcommunity.win/particles.js/particles.js" cross-origin="anonymous">
+      console.log('external script was included')
+    </script>
+    <script>
+      /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+
+      particlesJS(
+        "particles-js",
+
+        {
+          particles: {
+            number: {
+              value: 48,
+              density: {
+                enable: true,
+                value_area: 320.34597365154366,
+              },
+            },
+            color: {
+              value: "#fff",
+            },
+            shape: {
+              type: "circle",
+              stroke: {
+                width: 0,
+                color: "#000000",
+              },
+              polygon: {
+                nb_sides: 5,
+              },
+              image: {
+                src: "img/github.svg",
+                width: 100,
+                height: 100,
+              },
+            },
+            opacity: {
+              value: 0.5,
+              random: true,
+              anim: {
+                enable: false,
+                speed: 1,
+                opacity_min: 0.1,
+                sync: false,
+              },
+            },
+            size: {
+              value: 10,
+              random: true,
+              anim: {
+                enable: false,
+                speed: 40,
+                size_min: 0.1,
+                sync: false,
+              },
+            },
+            line_linked: {
+              enable: false,
+              distance: 500,
+              color: "#ffffff",
+              opacity: 0.4,
+              width: 2,
+            },
+            move: {
+              enable: true,
+              speed: 2,
+              direction: "bottom",
+              random: false,
+              straight: false,
+              out_mode: "out",
+              bounce: false,
+              attract: {
+                enable: false,
+                rotateX: 600,
+                rotateY: 1200,
+              },
+            },
+          },
+          interactivity: {
+            detect_on: "canvas",
+            events: {
+              onhover: {
+                enable: true,
+                mode: "bubble",
+              },
+              onclick: {
+                enable: true,
+                mode: "repulse",
+              },
+              resize: true,
+            },
+            modes: {
+              grab: {
+                distance: 400,
+                line_linked: {
+                  opacity: 0.5,
+                },
+              },
+              bubble: {
+                distance: 400,
+                size: 4,
+                duration: 0.3,
+                opacity: 1,
+                speed: 3,
+              },
+              repulse: {
+                distance: 200,
+                duration: 0.4,
+              },
+              push: {
+                particles_nb: 4,
+              },
+              remove: {
+                particles_nb: 2,
+              },
+            },
+          },
+          retina_detect: true,
+        }
+      );
+      console.log("particle js config was loaded");
+    </script>
+  </body>
+</html>
